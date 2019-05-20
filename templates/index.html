@@ -6,13 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>flask</title>
+    <link rel="stylesheet" href="/static/libs/reset.css">
     <link rel="stylesheet" href="/static/index.css">
 </head>
 
 <body>
     <div id="app">
-        <h1>hello flask develop</h1>
+        <h1>{{title}}</h1>
     </div>
+    <script type="text/javascript" src="/static/libs/echarts.js"></script>
+    <script type="text/javascript" src="/static/libs/lodash.js"></script>
+    <script type="text/javascript" src="/static/libs/socket.io.js"></script>
+    <script type="text/javascript" src="/static/libs/jquery.js"></script>
+    <script type="text/javascript" src="/static/libs/vue.js"></script>
+    <script type="text/javascript">
+    const app = new Vue({
+            el: '#app',
+            components: {
+        
+            },
+            data: function(){
+            return {
+                title: 'Hello World'
+            }
+            },
+        
+            created() {
+            console.log('created');
+            setTimeout(() => {
+                this.title = 'Hello Vue'
+            }, 5000)
+            },
+        
+            mounted() {
+            console.log('mounted')
+            },
+            watch: {
+            title: function(val) {
+                console.log(val)
+            }
+            },
+        
+            computed: {
+        
+            },
+        
+        })
+    </script>
 </body>
 
 </html>

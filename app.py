@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+from datetime import timedelta
 
 app = Flask(__name__, static_folder = 'static')
 
+app.config['DEBUG'] = True
+app.config['SEND_FILE_MAX_DEFAULT'] = timedelta(seconds=1)
 
 @app.route('/hello')
 def hello_world():
