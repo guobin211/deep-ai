@@ -12,7 +12,7 @@
 
 <body>
     <div id="app">
-        <h1>{{title}}</h1>
+        <h1>{{message}}</h1>
     </div>
     <script type="text/javascript" src="/static/libs/echarts.js"></script>
     <script type="text/javascript" src="/static/libs/lodash.js"></script>
@@ -20,38 +20,35 @@
     <script type="text/javascript" src="/static/libs/jquery.js"></script>
     <script type="text/javascript" src="/static/libs/vue.js"></script>
     <script type="text/javascript">
-    const app = new Vue({
+    window.onload = function() {
+        const app = new Vue({
             el: '#app',
-            components: {
-        
+            data: {
+                message: 'Hello World'
             },
-            data: function(){
-            return {
-                title: 'Hello World'
-            }
-            },
-        
+
             created() {
-            console.log('created');
-            setTimeout(() => {
-                this.title = 'Hello Vue'
-            }, 5000)
+                console.log('created');
+                setTimeout(() => {
+                    this.message = 'Hello Vue'
+                }, 5000)
             },
-        
+
             mounted() {
-            console.log('mounted')
+                console.log('mounted')
             },
             watch: {
-            title: function(val) {
-                console.log(val)
-            }
+                message: function (val) {
+                    console.log(val)
+                }
             },
-        
+
             computed: {
-        
+
             },
-        
+
         })
+    }
     </script>
 </body>
 
