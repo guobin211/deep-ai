@@ -7,4 +7,6 @@ dist
 .vscode
 .idea
 .DS_Store
+java-type/out
+node_modules
 
