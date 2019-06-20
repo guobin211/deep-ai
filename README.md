@@ -1,5 +1,4 @@
-# deep-ai python 3.7.1
+# deep-ai
 
-## 数据结构
+##### leetcode 算法笔记
 
-## 算法
