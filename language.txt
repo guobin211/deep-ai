@@ -1,3 +1,2 @@
-java jdk 12
 javascript node 10.15
 cpp c++ 17

@@ -9,4 +9,7 @@ dist
 .DS_Store
 java-type/out
 node_modules
+cpp/.idea
+cpp/**/cmake-build-debug
+java-type/out
 
