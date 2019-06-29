@@ -1,0 +1,25 @@
+{
+  "name": "deep-ai",
+  "version": "1.0.0",
+  "description": "deep ai code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guobin211/deep-ai.git"
+  },
+  "keywords": [
+    "leetcode"
+  ],
+  "author": "guobin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guobin211/deep-ai/issues"
+  },
+  "homepage": "https://github.com/guobin211/deep-ai#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  }
+}

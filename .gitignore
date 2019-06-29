@@ -12,4 +12,5 @@ node_modules
 cpp/.idea
 cpp/**/cmake-build-debug
 java-type/out
-
+node_modules
+package-lock.json
