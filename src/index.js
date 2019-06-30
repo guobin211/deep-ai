@@ -1,4 +1,3 @@
-
 const client = Object.create(null);
 
 client.name = 'socket';
