@@ -34,14 +34,14 @@ void BubbleSort(int arr[], int size) {
 }
 
 int main(int argc, char *argv[]) {
-    int length = 10000;
+    int length = 100000;
     int data[length];
 
     for (int m = 0; m < length; m++) {
         data[m] = (random() % 10000);
     }
     cout << data[0] << "--" << data[length - 1] << endl;
-//    BubbleSort(data, length);
+    BubbleSort(data, length);
     SELECT_SORT::SelectSort(data, length);
     cout << data[0] << "--" << data[length - 1] << endl;
 
