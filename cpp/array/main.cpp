@@ -4,6 +4,7 @@
 #include <random>
 #include "select_sort.h"
 #include "sort_util.h"
+#include "sort_test.h"
 
 using namespace std;
 
@@ -43,6 +44,12 @@ int main(int argc, char *argv[]) {
 //    BubbleSort(data, length);
     SELECT_SORT::SelectSort(data, length);
     cout << data[0] << "--" << data[length - 1] << endl;
+
+    int *intArr = SortTest::generateArray(length, 0, length);
+    SELECT_SORT::SelectSort(intArr, length);
+    SortTest::printArray(intArr, length);
+    delete[] intArr;
+
     int arr[5] = {1, 2, 3, 4, 5};
 
     cout << "variable bytes: " << sizeof(arr) << endl;
