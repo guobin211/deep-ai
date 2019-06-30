@@ -14,3 +14,4 @@ cpp/**/cmake-build-debug
 java-type/out
 node_modules
 package-lock.json
+build
