@@ -28,7 +28,7 @@ function quickSort(arr) {
 }
 
 const arr = [];
-SORT_TEST.generateArray(arr, 100000, 0, 10000);
+SORT_TEST.generateArray(arr, 10000, 0, 10000);
 // SORT_TEST.testArray(arr);
 console.time();
 // bubbleSort(arr);
