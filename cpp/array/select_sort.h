@@ -5,7 +5,7 @@
 #ifndef ARRAY_SELECT_SORT_H
 #define ARRAY_SELECT_SORT_H
 
-namespace SELECT_SORT {
+namespace SelectSort {
     /**
      * 选择排序
      * @param arr

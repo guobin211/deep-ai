@@ -6,12 +6,16 @@
 #define ARRAY_SORT_TEST_H
 
 #include <iostream>
-#include <cassert>
+#include <random>
 
-using namespace std;
-namespace SortTest{
+namespace SortTest {
+    int* copyIntArray(int arr[], int n) {
+        int* res = new int[n];
+        std::copy(arr, arr + n, res);
+        return res;
+    }
 
-    int* generateArray(int n, int rangeL, int rangeR) {
+    int *generateArray(int n, int rangeL, int rangeR) {
         assert(rangeL < rangeR);
         int *arr = new int[n];
         for (int i = 0; i < n; ++i) {
@@ -20,12 +24,20 @@ namespace SortTest{
         return arr;
     }
 
-    template <typename T>
+    template<typename T>
     void printArray(T arr[], int n) {
         for (int i = 0; i < n; i++) {
-            cout << arr[i] << " ";
+            std::cout << arr[i] << " ";
         }
-        cout << endl;
+        std::cout << std::endl;
+    }
+
+    template<typename T>
+    void testSort(const std::string &sortName, void(*sort)(T[], int), T arr[], int n) {
+        clock_t timeStart = clock();
+        sort(arr, n);
+        clock_t timeEnd = clock();
+        std::cout << sortName << " : " << double(timeEnd - timeStart) / CLOCKS_PER_SEC << "s" << std::endl;
     }
 }
 
