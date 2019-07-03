@@ -6,7 +6,7 @@ namespace Human {
     class Person {
     public:
         std::string name;
-        int age{};
+        int age;
 
         explicit Person(time_t _created) {
             created = _created;
@@ -19,18 +19,31 @@ namespace Human {
         std::string ToString() {
             return "{name:\"" + name + "\", age: " + std::to_string(age) + "}";
         }
-
+        /**
+         * 操作符重载
+         * @param output
+         * @param person
+         * @return
+         */
+        friend ostream &operator<<( ostream &output,
+                                    const Person &person )
+        {
+            output << "{name:\"" << person.name << "\", age: " << person.age << "}";
+            return output;
+        }
     private:
         time_t created;
     };
 }
+
 /**
  * 模版函数
  * 消除函数调用的时空开销
  * @param a
  * @param b
  */
-template<typename T> void swap(T *a, T *b) {
+template<typename T>
+void swap(T *a, T *b) {
     T temp = *a;
     *a = *b;
     *b = temp;
@@ -43,6 +56,7 @@ int main(int argc, char *argv[]) {
     person.name = name;
     person.age = 22;
     cout << person.ToString() << endl;
+    cout << person << endl;
     cout << "name: " + person.name << endl;
     cout << "age: " + to_string(person.age) << endl;
     cout << person.GetCreated() << endl;
@@ -57,5 +71,7 @@ int main(int argc, char *argv[]) {
     }
     // 释放内存
     delete[] arr;
+    cout << arr << endl;
+
     return 0;
 }
