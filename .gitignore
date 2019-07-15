@@ -17,3 +17,5 @@ package-lock.json
 build
 yarn.lock
 *.dSYM
+assets
+public

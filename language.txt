@@ -1,2 +1,2 @@
-javascript node 10.15
+javascript node 12.5
 cpp c++ 17

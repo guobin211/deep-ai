@@ -1,6 +1,6 @@
 # deep-ai
 
-### leetcode 算法笔记
+### 一些小功能
 
 ```bash
 	
