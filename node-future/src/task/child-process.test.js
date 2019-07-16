@@ -43,7 +43,7 @@ testProcessSend();
 
 /**
  * 调用bash命令
- * @returns {Promise<void>}
+ * @returns {PromisePro<void>}
  */
 async function testCommand() {
   const {stdout, stderr} = await util.promisify(exec)('ls');
