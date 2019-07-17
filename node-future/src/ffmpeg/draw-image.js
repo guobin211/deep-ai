@@ -6,11 +6,13 @@
 'use strict';
 const gm = require('gm');
 
-const code = '2f3e';
+const code = 'f9g2';
 const out = '/Users/guobin/idea/deep-ai/node-future/assets/code.png';
 
 function main() {
-  gm(200, 400, '#ffffff').font("Helvetica.ttf", 12).drawText(10, 50, code).write(out, err => {
+  gm(90, 30, '#ffffff').font("Helvetica.ttf", 28).drawText(10, 24, code)
+    .stroke('#f08300')
+    .write(out, err => {
     if (!err) {
       console.log('success');
     } else {
