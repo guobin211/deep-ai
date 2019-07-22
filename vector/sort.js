@@ -8,8 +8,7 @@ function generate(count, range) {
 	return res;
 }
 
-const arr = generate(10000, 1000);
-
+const arr = generate(100000, 1000);
 
 function bubbleSort(arr) {
 	let swap;

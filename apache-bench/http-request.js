@@ -9,13 +9,13 @@ function request(url) {
 			res.resume();
 			res.on('data', function (buff) {
 				data += buff.toString();
-			})
+			});
 			res.on('end', function () {
 				resolve(data)
-			})
+			});
 			res.on('error', function (reason) {
 				reject(reason)
-			})
+			});
 		})
 	})
 
