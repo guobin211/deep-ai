@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "url": "https://github.com/guobin211/node-c"
+    "url": "https://github.com/guobin211/deep-ai"
   },
   "keywords": [
     "node"
