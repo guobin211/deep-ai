@@ -19,3 +19,7 @@ yarn.lock
 *.dSYM
 assets
 public
+*.png
+*.jpg
+*.mp4
+*.webm
