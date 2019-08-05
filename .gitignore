@@ -23,3 +23,5 @@ public
 *.jpg
 *.mp4
 *.webm
+cmake-build-debug
+.DS_Store

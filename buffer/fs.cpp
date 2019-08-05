@@ -5,7 +5,6 @@ using namespace std;
 
 void read_file_sync(string path) {
 	std::cout << path << std::endl;
-
 }
 
 int main(int argc, char *argv[]) {
